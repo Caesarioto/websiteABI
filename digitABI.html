@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitabi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-100 to-orange-100">
+  <div class="max-w-3xl mx-auto p-12 bg-white rounded-xl shadow-2xl mt-10">
+    <h1 class="text-4xl font-extrabold text-center text-blue-600 mb-6">Digitabi</h1>
+    <div class="flex justify-center gap-4 mb-10">
+      <button class="px-6 py-2 rounded font-semibold bg-blue-600 text-white">Abibuch-Konfigurator</button>
+      <button class="px-6 py-2 rounded font-semibold bg-gray-200 text-gray-700">Steckbrief-Editor</button>
+    </div>
+
+    <!-- STEP 0 -->
+    <div>
+      <p class="mb-4 text-xl font-semibold text-gray-800">Für welches Jahr?</p>
+      <div class="flex gap-4 mb-6">
+        <button class="px-6 py-3 rounded border font-medium text-lg bg-orange-500 text-white">2024</button>
+        <button class="px-6 py-3 rounded border font-medium text-lg bg-white text-black">2025</button>
+        <button class="px-6 py-3 rounded border font-medium text-lg bg-white text-black">2026</button>
+      </div>
+      <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="mt-10">
+      <p class="mb-4 text-xl font-semibold text-gray-800">Wie viele Personen sollen ein Abibuch bekommen?</p>
+      <input type="range" min="1" max="170" class="w-full">
+      <p class="mt-2 text-center text-xl font-semibold text-gray-900">85 Personen</p>
+      <div class="mt-6 flex justify-between">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="mt-10">
+      <p class="mb-4 text-xl font-semibold text-gray-800">Möchtest du eine digitale Version deines Abibuchs?</p>
+      <div class="flex gap-4 mb-6">
+        <button class="px-6 py-3 rounded border font-medium text-lg bg-white text-black">Ja</button>
+        <button class="px-6 py-3 rounded border font-medium text-lg bg-white text-black">Nein</button>
+        <button class="px-6 py-3 rounded border font-medium text-lg bg-orange-500 text-white">Nur digital</button>
+      </div>
+      <div class="flex justify-between">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="mt-10">
+      <p class="mb-4 text-xl font-semibold text-gray-800">Wie viel Speicherplatz benötigst du für deine digitale Version?</p>
+      <div class="flex flex-col gap-2 mb-6">
+        <label class="flex items-center gap-2 text-lg text-gray-900">
+          <input type="radio" name="storage"> 32GB
+        </label>
+        <label class="flex items-center gap-2 text-lg text-gray-900">
+          <input type="radio" name="storage"> 64GB
+        </label>
+        <label class="flex items-center gap-2 text-lg text-gray-900">
+          <input type="radio" name="storage"> 128GB
+        </label>
+      </div>
+      <div class="flex justify-between">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="mt-10">
+      <p class="mb-4 text-xl font-semibold text-gray-800">Welche Inhalte möchtest du in deinem Abibuch?</p>
+      <div class="flex flex-col gap-2 mb-6">
+        <label class="flex items-center gap-2 p-3 border rounded text-lg text-gray-900">
+          <input type="checkbox"> Lehrer-Steckbriefe
+        </label>
+        <label class="flex items-center gap-2 p-3 border rounded text-lg text-gray-900">
+          <input type="checkbox"> Schüler-Steckbriefe
+        </label>
+        <label class="flex items-center gap-2 p-3 border rounded text-lg text-gray-900">
+          <input type="checkbox"> Fotos
+        </label>
+        <label class="flex items-center gap-2 p-3 border rounded text-lg text-gray-900">
+          <input type="checkbox"> Schüler-Rankings
+        </label>
+        <label class="flex items-center gap-2 p-3 border rounded text-lg text-gray-900">
+          <input type="checkbox"> Lehrer-Rankings
+        </label>
+      </div>
+      <div class="flex justify-between">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="mt-10">
+      <p class="mb-4 text-xl font-semibold text-gray-800">Welche Maße soll dein Abibuch haben?</p>
+      <label class="flex items-center gap-2 text-lg text-gray-900">
+        <input type="radio" name="size"> DIN A4 (210x297 mm)
+      </label>
+      <label class="flex items-center gap-2 text-lg text-gray-900">
+        <input type="radio" name="size"> Buchformat (170x210 mm)
+      </label>
+      <div class="flex justify-between mt-6">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+      </div>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="mt-10">
+      <p class="mb-4 text-xl font-semibold text-gray-800">Welche Art von Cover soll dein Abibuch haben?</p>
+      <label class="flex items-center gap-2 text-lg text-gray-900">
+        <input type="radio" name="cover"> Hard-Cover
+      </label>
+      <label class="flex items-center gap-2 text-lg text-gray-900">
+        <input type="radio" name="cover"> Soft-Cover
+      </label>
+      <div class="flex justify-between mt-6">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-orange-500 text-white px-8 py-3 text-lg rounded">Weiter</button>
+      </div>
+    </div>
+
+    <!-- STEP 7 -->
+    <div class="mt-10">
+      <p class="mb-4 font-semibold text-xl text-gray-800">Zusammenfassung deiner Auswahl:</p>
+      <ul class="bg-gray-100 p-6 rounded text-lg leading-relaxed text-gray-900">
+        <li><strong>Jahr:</strong> 2025</li>
+        <li><strong>Personen:</strong> 85</li>
+        <li><strong>Digital:</strong> Ja</li>
+        <li><strong>Inhalte:</strong> Lehrer-Steckbriefe, Fotos</li>
+        <li><strong>Speicherplatz:</strong> 64GB</li>
+        <li><strong>Buchgröße:</strong> DIN A4</li>
+        <li><strong>Cover:</strong> Hard-Cover</li>
+      </ul>
+      <div class="mt-6 flex justify-between">
+        <button class="bg-blue-500 text-white px-8 py-3 text-lg rounded">Zurück</button>
+        <button class="bg-green-600 text-white px-8 py-3 text-lg rounded">Preis berechnen</button>
+      </div>
+    </div>
+
+    <!-- STECKBRIEF-EDITOR -->
+    <div class="space-y-4 mt-10">
+      <!-- Steckbrief-Felder -->
+      <!-- Es folgen nur einige beispielhaft – die Liste kann bei Bedarf erweitert werden -->
+      <div>
+        <label class="block text-lg font-medium text-gray-700">Leistungskurs</label>
+        <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Antwort eingeben...">
+      </div>
+      <div>
+        <label class="block text-lg font-medium text-gray-700">Lieblingsfach</label>
+        <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Antwort eingeben...">
+      </div>
+      <div>
+        <label class="block text-lg font-medium text-gray-700">Hassfach</label>
+        <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded" placeholder="Antwort eingeben...">
+      </div>
+      <!-- ... weitere Fragen hier ... -->
+    </div>
+  </div>
+</body>
+</html>
